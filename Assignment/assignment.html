@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div id="wrapper">	
+	<form name="myform" id="myform" onsubmit="return(totalScore());">
+	 <h1> Quiz</h1>
+	   <div id="section_border">
+		 <h2> True or False</h2>
+				<label>1.Every HTML document should have DOCTYPE</label><br>
+					<input type="radio" value="v1" name="t1">True<br>
+					<input type="radio" value="v2" name="t1">False<br><br>
+			
+				<label>2.JPG does not support transparency.</label><br>
+					<input type="radio" value="u1" name="t2" >True<br>
+					<input type="radio" value="u2" name="t2" >False<br><br>
+			
+				<label>3.'Color' property is used to change the background color?</label><br>
+					<input type="radio" value="s1" name="t3">True<br>
+					<input type="radio" value="s2" name="t3">False<br><br>
+				
+				<label>4.The external JavaScript file must contain the 'script' tag.?</label><br>
+					<input type="radio" value="t1" name="t4">True<br>
+					<input type="radio" value="t2" name="t4">False<br><br>
+
+				<label>5.Padding property can have negative values?</label><br>
+					<input type="radio" value="w1" name="t5">True<br>
+					<input type="radio" value="w2" name="t5">False<br>
+		 </div><!--section_border-->
+		 
+       <div id="section_border">	  		 
+	  <h2> Choose one correct Answer for questions below</h2>
+		
+			<label>1.Which part of the HTML document would you find META tag information?</label><br>
+				<input type="radio" value="title" name="c1">Title<br>
+				<input type="radio" value="body" name="c1" >Body<br>
+				<input type="radio" value="head" name="c1" >Head<br><br>
+
+			<label>2.How to add e-mail link?</label><br>
+				<input type="radio" value="mail" name="c2">Add'mail'<br>
+				<input type="radio" value="mailto" name="c2">Add'mailto:'<br>
+				<input type="radio" value="email" name="c2">Add'email:'<br><br>
+				
+			<label>3.Which HTML attribute is used to define inline styles?</label><br>
+				<input type="radio" value="style" name="c3">style<br>
+				<input type="radio" value="class" name="c3">class<br>
+				<input type="radio" value="font" name="c3">font<br><br>
+		
+			<label>4.What is the correct syntax for referring to an external script called "xxx.js"?</label><br>
+				<input type="radio" value="src" name="c4"><'script src="xxx.js"'><br>
+				<input type="radio" value="href" name="c4"><'script href="xxx.js"'><br>
+				<input type="radio" value="name" name="c4"><'script name="xxx.js"'><br><br>
+				
+			<label>5.Which element is no longer supported in HTML5?</label><br>
+				<input type="radio" value="menu" name="c5">menu<br>
+				<input type="radio" value="br" name="c5">br<br>
+				<input type="radio" value="font" name="c5">font<br>
+	  </div><!--section_border-->
+	  
+       <div id="section_border">	  	 
+	 <h2>Choose multiple anwers</h2>
+	    	<label>1.Which formats are examples of lossless files?<br>
+			<input type="checkbox" value="png" id="png">PNG<br>			
+			<input type="checkbox" value="jpeg" id="jpeg">JPEG<br>			
+			<input type="checkbox" value="gif" id="gif">GIF<br>
+			<input type="checkbox" value="raw" id="raw">RAW<br><br>
+			
+	    	<label>2.Where is the correct place to insert a JavaScript?</label><br>
+			<input type="checkbox" value="head" id="head">The 'head' section<br>			
+			<input type="checkbox" value="title" id="title">The 'title' section<br>			
+			<input type="checkbox" value="body" id="body">The 'body' section<br>
+			<input type="checkbox" value="meta" id="meta">The 'meta' section<br><br>
+
+	    	<label>3.What is ALT text?</label><br>
+			<input type="checkbox" value="a" id="mouseOver" >Text displayed when you hold your mouse over an image<br>			
+			<input type="checkbox" value="b" id="both_text_and_image">Displays both text and image<br>			
+			<input type="checkbox" value="c" id="image_is_not_found">Text displayed when an image is not found<br>
+			<input type="checkbox" value="d" id="none">none of the above<br><br>
+
+	    	<label>4.Example of javascript loop</label><br>
+			<input type="checkbox" value="for" id="for">for<br>			
+			<input type="checkbox" value="if" id="if">if<br>			
+			<input type="checkbox" value="continue" id="continue">continue<br>
+			<input type="checkbox" value="while" id="while">while<br><br>
+
+	    	<label>5.Which of the following is true about variable naming conventions in JavaScript?</label><br>
+			<input type="checkbox" value="a" id="case_sensitive">Javascript variable names are case sensitive<br>			
+			<input type="checkbox" value="b" id="numeral">Javascript variable names  can start with a numeral<br>			
+			<input type="checkbox" value="c" id="underscore">Javascript variable names can start with underscore<br>
+			<input type="checkbox" value="d" id="special_symbols">Javascript variable names can start with special symbols<br>
+
+		 </div ><!--section_border-->
+      <div id="section_border">
+	<h2>Fill in the blank</h2>	
+            <label>1.HTML stands for </label>
+				<input type="text" id="html"><br><br>
+			<label>2.How do you call a function named "myFunction"?</label>
+				<input type="text" id="call"><br><br>
+            <label>3.Property used to add or subtract space between the words of a sentence is </label>
+				<input type="text" id="add"><br><br>
+    		<label>4.variable is visible only within a function can be defined as </label>
+				<input type="text" id="variable"><br><br>
+    		<label>5.Tag for numbered list is </label>
+				<input type="text" id="list"><br>
+		 </div><!--section_border-->
+	</form>
+   <button type="button" onclick="totalScore()">Submit</button>	
+	<div id="result1"></div>
+	<div id="result2"></div>
+	<div id="result3"></div>
+	<div id="result4"></div>
+	<div id="results"></div>
+	</div><!--wrapper-->
+		<script type="text/javascript">
+		function totalScore()
+			  {
+				var t_score=0;
+				var c_score=0;
+				var m_score=0;
+				var f_score=0;
+				var total_score=0;
+				
+				//storing values for first section
+				var a1=document.getElementById('myform').t1.value; 
+				var a2=document.getElementById('myform').t2.value;
+				var a3=document.getElementById('myform').t3.value;
+				var a4=document.getElementById('myform').t4.value;
+				var a5=document.getElementById('myform').t5.value;
+				
+				//storing values for first section
+				var c1=document.getElementById('myform').c1.value;
+				var c2=document.getElementById('myform').c2.value;
+				var c3=document.getElementById('myform').c3.value;
+				var c4=document.getElementById('myform').c4.value;
+				var c5=document.getElementById('myform').c5.value;
+				
+				//first section
+				if(a1=='v1')
+					{t_score=t_score+1;
+					console.log(t_score);}
+				if(a2=='u1')
+					{t_score=t_score+1; 
+					console.log(t_score);}
+				if(a3=='s2')
+					{t_score=t_score+1;
+                    console.log(t_score);}					
+				if(a4=='t1')
+					{t_score=t_score+1;
+					console.log(t_score);}
+				if(a5=='w2')
+					{t_score=t_score+1;	
+					console.log(t_score);}
+			   document.getElementById('result1').innerHTML = 'Score in first section:' +t_score; //output result for section one			
+			  //secound section
+			  if(c1=='head')
+					c_score=c_score+1;
+				if(c2=='mailto')
+					c_score=c_score+1; 
+				if(c3=='style')
+					c_score=c_score+1; 
+				if(c4=='href')
+					c_score=c_score+1; 	
+				if(a5=='font')
+					c_score=c_score+1;
+				document.getElementById('result2').innerHTML = 'Score in Second section:' +c_score; //output result for section two
+                //third section
+		       if((document.getElementById('png').checked==true)&&(document.getElementById('raw').checked==true))
+		             m_score=m_score+1;
+			   if((document.getElementById('head').checked==true)&&(document.getElementById('body').checked==true))
+                     m_score=m_score+1;
+               if((document.getElementById('mouseOver').checked==true)&&(document.getElementById('image_is_not_found').checked==true))
+                     m_score=m_score+1;
+               if((document.getElementById('for').checked==true)&&(document.getElementById('if').checked==true)&&(document.getElementById('while').checked==true))
+                     m_score=m_score+1;
+               if((document.getElementById('case_sensitive').checked==true)&&(document.getElementById('underscore').checked==true))		
+			         m_score=m_score+1;
+			     document.getElementById('result3').innerHTML = 'Score in Third section:' +m_score;	//output result for section three	 
+			   //forth section
+			   if(document.getElementById('html').value=='hyper text markup language')   
+			         f_score=f_score+1;
+			   if(document.getElementById('call').value=='myfunction()')
+			         f_score=f_score+1;
+			   if(document.getElementById('add').value=='text-indent')			  
+        			  f_score=f_score+1;
+			   if(document.getElementById('html').value=='local variable')	
+			         f_score=f_score+1;
+			   if(document.getElementById('html').value=='ol')			   
+			          f_score=f_score+1;
+				document.getElementById('result4').innerHTML = 'Score in forth section:' +f_score; //output result for section four
+				
+				total_score=t_score+c_score+m_score+f_score;      //adding all section score
+				document.getElementById('results').innerHTML = 'Total Score:' +total_score;
+			  }
+		</script>
+	</body>
+</html>
